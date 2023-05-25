@@ -3,7 +3,7 @@
 #include <string>
 using namespace std;
 class Envio {
-    private:
+    protected:
         string nombre;
         string direccion;
         string ciudad;  
@@ -12,9 +12,11 @@ class Envio {
         double costo_estandar;
         double costo;
     public:
-        Envio(string Nombre, string Direccion, string Ciudad, string Estado, int CodigoPostal);
+        Envio(string Nombre, string Direccion, string Ciudad, string Estado, int CodigoPostal, int estandar);
         double calculaCosto(); 
         void imprimir();
+        void setCosto();
+        string getNombre();
 };
 
 #endif
