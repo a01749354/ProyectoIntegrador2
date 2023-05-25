@@ -1,8 +1,6 @@
-#include <iostream>
 #include "myclass.h"
-using namespace std
 
-Myclass::Myclass(int age, string name){
-    num=age;
-    nom=name;
+MyClass::MyClass(int num, string str) {
+  myNum = num;
+  myString = str;
 }
