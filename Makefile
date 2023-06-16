@@ -4,14 +4,14 @@
 
 # Compiler settings - Can be customized.
 CC = g++
-CXXFLAGS = -g -std=c++11 
-LDFLAGS =
+CXXFLAGS = -std=c++11 -Wall
+LDFLAGS = 
 
 # Makefile settings - Can be customized.
-APPNAME = myapp 
+APPNAME = proyecto
 EXT = .cpp
-SRCDIR = ./
-OBJDIR = ./
+SRCDIR = .
+OBJDIR = .
 
 ############## Do not change anything from here downwards! #############
 SRC = $(wildcard $(SRCDIR)/*$(EXT))

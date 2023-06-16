@@ -1,58 +1,46 @@
-#include"Video.h"
-#include<string>
-#include<iostream>
+/* 
+Autores:
+Omar Alejandro Lopez Velasco A00838219
+Andres Felipe Garcia Vina A01800027
+
+Hecho por Felipe
+*/
+
+#include "Video.hpp"
+#include <iostream>
+#include <string>
+using namespace std;
 
 
-using std::string;
-using std::cout;
-using std::endl;
+Video::Video(string id, string nombre, float duracion, string genero, float calificacion){
+    this->id = id;
+    this->nombre = nombre;
+    this->duracion = duracion;
+    this->genero = genero;
+    this->calificacion = calificacion;
+};
 
-//constructor
-Video::Video(string i,string nom,string dur,string gen): id{i},nombre{nom},duracion{dur},genero{gen}{}
+    
+void Video::setCalificacion(float num){
+    calificacion = num;
+};
 
+string Video::getId(){
+    return id;
+}
 string Video::getNombre(){
     return nombre;
 }
-
-
-float Video::getRating(){
-    return rating;
+float Video::getDuracion(){
+    return duracion;
 }
-
-
-int Video::isCalificado(){
-    if(resenias.size()==0){
-        return 0; //no ha sido calificado
-    }
-    else{
-    return 1; //si ya fue calificado
-    }
-}
-
-
 string Video::getGenero(){
-return genero;
+    return genero;
 }
-
-float operator +(const Video& v1, const Video& v2){
-    return v1.rating + v2.rating;
+float Video::getCalificacion(){
+    return calificacion;
 }
-
-float operator +(float num, const Video& v){
-    return num + v.rating;
-    
-}
-
-void operator +=(int &num, const Video& v){
-bool calificado{false};
-if(v.resenias.size()!=0){//si el video cuenta con reseñas
-    calificado = true;
-}
-
-if(calificado){
-    num++;
-}
-
-}
-
-
+void Video::getInfo(){
+    cout<<"ID: "<<id<<" Nombre: "<<nombre<<" Duracion: "<<duracion<<" Genero: "<<genero<<" Calificacion: "<<calificacion;
+};
+      
