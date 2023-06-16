@@ -1,10 +1,4 @@
-/* 
-Autores:
-Omar Alejandro Lopez Velasco A00838219
-Andres Felipe Garcia Vina A01800027
 
-Hecho por Felipe
-*/
 
 #ifndef VIDEO_HPP
 #define VIDEO_HPP
