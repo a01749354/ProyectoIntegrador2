@@ -6,7 +6,8 @@
 using namespace std;
 
 int main(){
-    Plataforma plataforma("Netflixpirata");
+    Plataforma plataforma("Plataforma");
     plataforma.iniciar();
+    
     return 0;
 }
