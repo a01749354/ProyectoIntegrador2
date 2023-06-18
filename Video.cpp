@@ -1,10 +1,4 @@
-/* 
-Autores:
-Omar Alejandro Lopez Velasco A00838219
-Andres Felipe Garcia Vina A01800027
 
-Hecho por Felipe
-*/
 
 #include "Video.hpp"
 #include <iostream>

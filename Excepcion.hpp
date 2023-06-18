@@ -1,10 +1,4 @@
-/* 
-Autores:
-Omar Alejandro Lopez Velasco A00838219
-Andres Felipe Garcia Vina A01800027
 
-se realizo en conjunto mediante la extension livershare de VSCode
-*/
 
 #ifndef EXCEPCION_HPP
 #define EXCEPCION_HPP

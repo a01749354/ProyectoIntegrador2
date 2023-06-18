@@ -1,10 +1,3 @@
-/* 
-Autores:
-Omar Alejandro Lopez Velasco A00838219
-Andres Felipe Garcia Vina A01800027
-*/
-
-//creado por Omar
 
 #ifndef SERIE_H
 #define SERIE_H
