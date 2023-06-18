@@ -1,5 +1,4 @@
 
-
 #include "Serie.hpp"
 #include <iostream>
 #include <string>

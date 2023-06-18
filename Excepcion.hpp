@@ -1,4 +1,5 @@
 
+
 #ifndef EXCEPCION_HPP
 #define EXCEPCION_HPP
 #include <exception>

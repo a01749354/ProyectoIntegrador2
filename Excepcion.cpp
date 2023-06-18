@@ -1,5 +1,4 @@
 
-
 #include "Excepcion.hpp"
 #include <iostream>
 using namespace std;

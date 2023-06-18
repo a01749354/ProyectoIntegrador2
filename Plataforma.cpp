@@ -1,5 +1,4 @@
 
-
 #include "Plataforma.hpp"
 #include "Excepcion.hpp"
 #include <iostream>
@@ -17,18 +16,18 @@ Plataforma::Plataforma(string nombre){
 void Plataforma::leerPeliculas(){
     ifstream archivo(PELICULAS);
     string linea;
-    char coma = ',';
+    char delimitador = ',';
     vector<string> datos;
     while(getline(archivo, linea))
     {
         stringstream stream(linea);
         string id,nombre,duracion,genero,calificacion,director;    
-        getline(stream, id, coma);
-        getline(stream, nombre, coma);
-        getline(stream, duracion, coma);
-        getline(stream, genero, coma);
-        getline(stream, calificacion, coma);
-        getline(stream, director, coma);
+        getline(stream, id, delimitador);
+        getline(stream, nombre, delimitador);
+        getline(stream, duracion, delimitador);
+        getline(stream, genero, delimitador);
+        getline(stream, calificacion, delimitador);
+        getline(stream, director, delimitador);
 
         Pelicula pelicula(id, nombre, std::stof(duracion), genero, std::stof(calificacion), director);
         peliculas.push_back(pelicula);
@@ -40,16 +39,16 @@ void Plataforma::leerPeliculas(){
 void Plataforma::leerSeries(){
     ifstream archivo(SERIES);
     string linea;
-    char coma = ',';
+    char delimitador = ',';
     vector<string> datos;
     while(getline(archivo, linea))
     {
         stringstream stream(linea);
         string id,nombre,calificacion,numEp;    
-        getline(stream, id, coma);
-        getline(stream, nombre, coma);
-        getline(stream, calificacion, coma);
-        getline(stream, numEp, coma);
+        getline(stream, id, delimitador);
+        getline(stream, nombre, delimitador);
+        getline(stream, calificacion, delimitador);
+        getline(stream, numEp, delimitador);
         
         Serie serie(id, nombre, std::stof(calificacion), std::stof(numEp));
         series.push_back(serie);
@@ -60,22 +59,23 @@ void Plataforma::leerSeries(){
 void Plataforma::addEps(){
     ifstream archivo(EPISODIOS);   
     string linea;
-    char coma = ',';
+    char delimitador = ',';
     vector<string> datos;
     while(getline(archivo,linea))
     {
         stringstream stream(linea);
         string id,nombre,duracion,genero,calificacion,titulo,temporada,serie;
-        getline(stream, id, coma);
-        getline(stream, nombre, coma);
-        getline(stream, duracion, coma);
-        getline(stream, genero, coma);
-        getline(stream, calificacion, coma);
-        getline(stream, titulo, coma);
-        getline(stream, temporada, coma);
-        getline(stream, serie, coma);
+        getline(stream, id, delimitador);
+        getline(stream, nombre, delimitador);
+        getline(stream, duracion, delimitador);
+        getline(stream, genero, delimitador);
+        getline(stream, calificacion, delimitador);
+        getline(stream, titulo, delimitador);
+        getline(stream, temporada, delimitador);
+        getline(stream, serie, delimitador);
 
         Episodio ep(id, nombre, std::stof(duracion), genero, std::stof(calificacion), titulo, std::stoi(temporada), serie);
+        
         for(int i = 0; i < series.size(); i++){
             if(series[i].getNombre() == serie){
                 series[i].episodios.push_back(ep);
@@ -166,7 +166,8 @@ void Plataforma::iniciar(){
     bool band = true;
     string nombre, nombre2, pelicula1, pelicula2;
     int opcion;
-    while (band){
+    while (band)
+    {
         try
         {
             Plataforma::menu();
@@ -257,7 +258,7 @@ void Plataforma::iniciar(){
                                 cout<<peliculas[j].getNombre()<<" es mejor que "<<peliculas[i].getNombre()<<endl;
                             }
                             else{
-                                cout<<"Las peliculas son las mismas"<<endl;
+                                cout<<"las peliculas son iguales"<<endl;
                             }
                         }
                     }
@@ -266,7 +267,8 @@ void Plataforma::iniciar(){
 
         }
         }
-        catch(Excepcion &e){
+        catch(Excepcion &e)
+        {
             e.display();
         }
     } 
