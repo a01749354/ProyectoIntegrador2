@@ -1,3 +1,11 @@
+/* 
+Autores:
+Omar Alejandro Lopez Velasco A00838219
+Andres Felipe Garcia Vina A01800027
+
+Hecho por Omar
+*/
+
 #include "Episodio.hpp"
 #include <iostream>
 #include <string>

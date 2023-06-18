@@ -1,3 +1,19 @@
+/* 
+Autores:
+Omar Alejandro Lopez Velasco A00838219
+Andres Felipe Garcia Vina A01800027
+
+Al ser el modulo principal y el mas extenso se decidio que fuera hecho por ambos
+gracias a la extension livershare de VSCode
+
+Felipe realizo: leerPeliculas(), addEps(), filtrarVideosGenero(), mostrarEpisodiosSerieCalif(), 
+calificar()
+
+Omar realizo:  leerSeries(), filtrarVideosCalificacion(), filtrarPeliculasCalificacion(),
+menu(),nombrePeliculasDisponibles(), nombreSeriesDisponibles()
+
+inicio() se realizo en conjunto
+*/
 
 #include "Plataforma.hpp"
 #include "Excepcion.hpp"
